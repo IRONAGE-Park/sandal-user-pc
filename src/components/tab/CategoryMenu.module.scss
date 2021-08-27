@@ -1,0 +1,15 @@
+
+@import '../../styles/Root.scss';
+
+.tabs{
+    border-top :1px solid #DBDBDB !important;
+    border-bottom :1px solid #DBDBDB !important;
+}
+.tab-item{
+    min-height: 70px !important; //필수
+    margin: 0 24px !important;
+    display: flex !important;
+    flex : 1 1 0;
+    font-size: 2rem !important;
+    max-width: 120px !important;
+}

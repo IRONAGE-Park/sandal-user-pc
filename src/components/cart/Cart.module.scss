@@ -1,0 +1,102 @@
+@import '../../styles/Root.scss';
+
+.cart-item {
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    display: flex;
+    box-sizing: border-box;
+    .check-box {
+        display: flex;
+        padding-left: 40px;
+        padding-top: 40px;
+    }
+    .close-box {
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+    .menu-info {
+        width: 100%;
+        display: flex;
+        padding: 40px 0;
+        .menu-img {
+            padding-left: 60px;
+            padding-right: 80px;
+            img {
+                width: 160px;
+                height: 160px;
+            }
+        }
+        .menu-value {
+            width: 100%;
+            .menu-name-price {
+                font-size: 1.667rem;
+                font-weight: bold;
+                line-height: 1.5;
+                color: #222;
+                .m-name {
+                    display: inline-block;
+                    vertical-align: top;
+                    max-width: 360px;
+                }
+                .m-price {
+                    display: inline-block;
+                    vertical-align: top;
+                    padding-left: 25px;
+                }
+                padding: 5px 0;
+            }
+            .menu-option {
+                margin-top: 20px;
+                font-size: 1.333rem;
+                color: #555;
+            }
+            .box {
+                margin-top: 40px;
+                display: flex;
+                .box-item {
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    width: 96px;
+                    height: 48px;
+                    border: 1px solid #dbdbdb;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    font-size: 1.333rem;
+                    .value {
+                        font-size: 1.667rem;
+                    }
+                    div {
+                        width: 100%;
+                        &.opert {
+                            cursor: pointer;
+                        }
+                    }
+                    &:nth-child(2) {
+                        margin-left: 15px;
+                        transition: all .15s ease-in-out;
+                        &:hover {
+                            background-color: #fff;
+                            border-color: transparent;
+                            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menu-price {
+        width: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.167rem;
+        font-weight: bold;
+        color: #222;
+        border-left: 1px solid #dbdbdb;
+        padding-left: 40px;
+    }
+}

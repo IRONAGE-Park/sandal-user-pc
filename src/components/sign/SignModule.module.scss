@@ -1,0 +1,83 @@
+@import '../../styles/Root.scss';
+
+.sign-input {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    transition: all 0.15s ease-in-out;
+    overflow: hidden;
+
+    .label {
+        max-width: 130px;
+        min-width: 130px; height: 56px;
+        line-height: 56px;
+        font-size: 1.667rem;
+        font-weight: 500;
+        padding-left: 13px;
+        color: #222222;
+        &.mypage {
+            max-width: 150px; min-width: 150px;
+            font-weight: bold;
+            padding: 0;
+        }
+    }
+    input {
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        font-size: 1.333rem;
+        
+        background: #fff;
+        height: 56px;
+        outline: none;
+        box-sizing: border-box;
+        padding: 16px;
+        &.normal {
+            width: 540px;
+        }
+        &.auth {
+            width: 360px;
+        }
+        &.mypage {
+            width: 280px;
+            font-size: 1.667rem;
+        }
+        &::placeholder {
+            font-weight: 500;
+            color: #ccc;
+        }
+        transition: all .15s ease-in-out;
+        &:focus {
+            border-color: #222;
+        }
+    }
+    .auth-btn {
+        max-width: 160px;
+        min-width: 160px;
+        margin-left: 20px;
+        border: 1px solid $main-color;
+        border-radius: 2px;
+        box-sizing: border-box;
+        color: $main-color;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        &:hover {
+            background-color: #f9f9f9;
+        }
+        &.disabled {
+            color: #999;
+            cursor: default;
+            border-color: #ccc;
+        }
+    }
+}
+
+

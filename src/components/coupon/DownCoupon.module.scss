@@ -1,0 +1,59 @@
+@import '../../styles/Root.scss';
+
+$value1: -20px;
+$value2: 22px;
+.pd-box {
+    padding: 30px;
+    // border: 1px solid red;
+}
+.pd-side {
+    padding: 10px;
+}
+
+.downcoupon-list {
+    margin: 0 0 0 $value1;
+    .coupon-item {
+        cursor: pointer;
+        margin: $value2 0 0 $value2; 
+        width: 460px;
+        box-sizing: border-box;
+        height: 200px;
+        position: relative;
+        text-align: left;
+        border: 1px solid #dbdbdb;
+        border-radius: 10px;
+        margin-top: 24px;
+        background-color: #fff;
+        transition: all .15s ease-in-out;
+        .down {
+            min-width: 100px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border-right: 1px dashed #dbdbdb;
+        }
+        .info {
+            width: 100%;
+            font-size: 1.333rem;
+            box-sizing: border-box;
+            color: #777;
+            .event-name {
+                font-weight: bold;
+                font-size: 2rem;
+                color: #222;
+                margin-bottom: 29px;
+            }
+            .date,
+            .sale,
+            .sub-name {
+                margin-top: 8px;
+            }
+        }
+        &:hover {
+            border-color: transparent;
+            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+        }
+    }
+}

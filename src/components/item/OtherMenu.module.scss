@@ -1,0 +1,45 @@
+@import '../../styles/Root.scss';
+
+.container {
+    .link {
+        text-decoration: none;
+        margin: 0 20px;
+        margin-top: 40px;
+        display: inline-block;
+    }
+    .menu-item {
+        @include animation(0.5s, fadeIn);
+        box-sizing: border-box;
+        width: 240px;
+        .menu-img {
+            img {
+                width: 240px;
+                height: 280px;
+            }
+        }
+        //메뉴 정보 텍스트 영역
+        .menu-info {
+            width: 100%;
+            padding-top: 20px;
+            .menu-title {
+                font-size: 1.5rem;
+                color: #222;
+                margin-bottom: 8px;
+            }
+            .menu-price {
+                font-size: 1.833rem;
+                color: #222;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@include keyframe(fadeIn) {
+    from {
+        filter: blur(100px);
+    }
+    to {
+        filter: blur(0);
+    }
+}

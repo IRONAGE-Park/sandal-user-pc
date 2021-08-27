@@ -1,0 +1,134 @@
+@import '../../styles/Root.scss';
+.container {
+    @include wireframe;
+    .content {
+        @include content;
+        padding-bottom: 0;
+        .title {
+            @include title;
+        }
+        .shop {
+            min-height: 500px;
+        }
+    }
+}
+
+.divider {
+    width: 100%; height: 20px;
+    background-color: #f9f9f9;
+}
+.top-title {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    color: #222;
+    font-size: 3.333rem;
+}
+.banner {
+    min-width: $min-width;
+    .shop-banner {
+        @include animation(0.5s, fadeIn);
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@include keyframe(fadeIn) {
+    from {
+        filter: blur(100px);
+    }
+    to {
+        filter: blur(0);
+    }
+}
+.container {
+    @include wireframe;
+
+    .bottom-banner {
+        width: 100%; height: 400px;
+        margin-top: 100px;
+        margin-bottom: 150px;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .content {
+            padding: 96px 120px;
+            .title {
+                font-size: 2rem;
+                font-weight: normal;
+                padding: 0;
+                text-align: left;
+            }
+            .text {
+                margin-top: 10px;
+                font-size: 3.167rem;
+                font-weight: bold;
+            }
+            .button-area {
+                margin-top: 70px;
+                .button {
+                    width: 320px;
+                    height: 72px;
+                    border-radius: 36px;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: #222;
+                    background-color: #fdd800;
+                    transition: all .15s ease-in-out;
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.configure {
+    .contain {
+        @include wireframe;
+        padding: 60px 0;
+        text-align: center;
+        .menu-title {
+            color: #222;
+            font-size: 3.333rem;
+            margin-top: 60px;
+        }
+        .sub-title {
+            font-size: 18px;
+            color: #777;
+            margin-top: 10px;
+            margin-bottom: 60px; 
+        }
+        .sub-area {
+            margin-top: 60px;
+            padding-left: 50px;
+            width: 50%;
+            box-sizing: border-box;
+            color: #555;
+            font-size: 1.333rem;
+            text-align: left;
+            margin-left: auto;
+        }
+        .button-area {
+            margin-top: 120px;
+            margin-bottom: 100px;
+            .button {
+                width: 360px;
+                height: 64px;
+                border-radius: 36px;
+                font-size: 2rem;
+                font-weight: bold;
+                color: #222;
+                background-color: #fdd800;
+                transition: all .15s ease-in-out;
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+                }
+            }
+        }
+    }
+}

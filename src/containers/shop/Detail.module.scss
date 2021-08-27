@@ -1,0 +1,201 @@
+@import '../../styles/Root.scss';
+.min-height {
+    min-height: 100vh;
+}
+.container {
+    @include wireframe;
+    font-size: 2rem;
+    .menu-info {
+        @include wireframe;
+        display: flex;
+        padding-top: 80px;
+        margin-bottom: 120px;
+        .menu-view {
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            padding-right: 40px;
+            img {
+                width: 600px;
+            }
+        }
+        .item-info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            word-break: keep-all;
+            line-height: 1.5;
+            .item-name {
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: #222;
+                margin-bottom: 20px;
+            }
+            .item-text {
+                font-size: 1.5rem;
+                color: #555;
+            }
+            .item-price {
+                font-size: 3.333rem;
+                font-weight: bold;
+                color: #222;
+                padding: 35px 0;
+                border-bottom: 1px solid #dbdbdb;
+            }
+            .option-text {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #222;
+                padding-top: 40px;
+                padding-bottom: 20px;
+            }
+            .item-additional-list {
+                height: auto;
+                font-size: 1.333rem;
+                padding-bottom: 80px;
+            }
+            .item-space {
+                display: flex;
+                margin: 20px 0;
+            }
+
+            .box {
+                border-top: 1px solid #dbdbdb;
+                padding-top: 100px;
+                display: flex;
+                align-items: center;
+                .counter {
+                    cursor: pointer;
+                    border: 1px solid #dbdbdb;
+                    box-sizing: border-box;
+                    display: flex;
+                    height: 72px;
+                    .value {
+                        box-sizing: border-box;
+                        border: none;
+                        text-align: center;
+                        font-size: 1.5rem;
+                        width: 84px;
+                    }
+                    .control {
+                        width: 34px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        border-left: 1px solid #dbdbdb;
+                        .increment,
+                        .decrement {
+                            width: 100%;
+                            height: 35px;
+                        }
+                        .decrement {
+                            border-top: solid 1px #dbdbdb;
+                        }
+                    }
+                }
+                .btn {
+                    width: 100%;
+                    height: 72px;
+                    padding-left: 15px;
+                    button {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 2px;
+                        font-size: 1.833rem;
+                        font-weight: bold;
+                        color: #fff;
+                        background-color: #007246;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        @include wireframe;
+        .title {
+            font-size: 2.333rem;
+            font-weight: bold;
+            color: #222;
+        }
+        .other-menu-list {
+            height: 450px;
+            padding-bottom: 120px;
+        }
+        .detail-info {
+            word-break: keep-all;
+            line-height: 1.5;
+            button{
+                max-width: 100% !important;;
+            }
+            .detail-img {
+                padding-bottom: 120px;
+                text-align: center;
+                img {
+                    min-width: 700px;
+                }
+            }
+            .detail-text {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding-top: 60px;
+                margin-bottom: 60px;
+                .title {
+                    font-size: 3rem;
+                    font-weight: bold;
+                    color: #222;
+                    padding-top: 50px;
+                    padding-bottom: 0;
+                }
+                .sub-title {
+                    padding : 0 100px;
+                    line-height: 1.8;
+                    word-break: keep-all;
+                    font-size: 1.667rem;
+                    color: #777;
+                    padding-top: 10px;
+                    padding-bottom: 60px;
+                }
+                .explan {
+                    padding: 0 100px;
+                    font-size: 1.333rem;
+                    line-height: 1.8;
+                    color: #222;
+                    word-break: keep-all;
+                }
+            }
+            .detail-view {
+                padding: 80px 100px;
+                .table {
+                    width: 100%;
+                    height: 160px;
+                    border: 1px solid #ebebeb;
+                    display: table;
+                    vertical-align: middle;
+                    .cell {
+                        display: table-cell;
+                        height: 160px;
+                        text-align: center;
+                        font-size: 1.667rem;
+                        line-height: 80px;
+                        .tr {
+                            height: 80px;
+                            font-weight: bold;
+                            color: #222;
+
+                            background-color: #f9f9f9;
+                            border-bottom: 1px solid #ebebeb;
+                        }
+                        .td {
+                            height: 80px;
+                        }
+                    }
+                }
+            }
+            padding-bottom: 120px;
+        }
+    }
+}

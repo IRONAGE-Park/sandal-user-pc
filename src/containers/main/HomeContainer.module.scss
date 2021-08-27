@@ -1,0 +1,200 @@
+@import '../../styles/Root.scss';
+.container {
+    // @include wireframe;
+    min-width: $min-width;
+    .banner-img {
+        cursor: pointer;
+        @include wireframe;
+        padding: 0;
+        margin-top: 160px;
+        margin-bottom: 110px;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+    }
+    .list-box {
+        min-height: 500px;
+        max-height: 600px;
+        overflow: hidden;
+    }
+
+    .menu-list {
+        position: relative;
+        .category {
+            list-style: none;
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            .item {
+                cursor: pointer;
+                display: inline-block;
+                text-align: center;
+                overflow: hidden;
+                border-radius: 20px;
+                border: solid 1px #DBDBDB;
+                margin: 0 10px;
+                color: #999;
+                font-weight: normal;
+                font-size: 1.5rem;
+
+                transition: all .15s ease-in-out;
+                &.active {
+                    color: #222;
+                    border-color: #333;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                }
+                &:hover {
+                    border-color: #fff;
+                    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+                }
+            }
+        }
+        .list{
+            min-height: 500px;
+        }
+    }
+
+    .order {
+        @include wireframe;
+        margin: 0 auto;
+        margin-bottom: 160px;
+        min-width: $min-width;
+        width: 100%;
+        height: 424px;
+
+        .box {
+            display: inline-block;
+            background-color: #f5f5f5;
+            width: 50%;
+            height: 100%;
+            vertical-align: top;
+            position: relative;
+            .back-img {
+                width: 100%;
+                height: 100%;
+            }
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .service {
+                .pd-box {
+                    width: 420px;
+                    padding: 30px 0;
+                }
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 420px;
+                height: 290px;
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                .title {
+                    font-size: 2.833rem;
+                    font-weight: bold;
+                    color: #222;
+                    margin-bottom: 10px;
+                }
+                .sub-title {
+                    font-size: 1.5rem;
+                    color: #555;
+                    margin-bottom: 54px;
+                }
+                .order-btn {
+                    width: 320px; height: 72px;
+                    text-align: center;
+                    line-height: 70px;
+                    color: $main-color;
+                    font-size: 1.667rem;
+                    font-weight: bold;
+                    border: 1px solid #dbdbdb;
+                    border-radius: 36px;
+                    box-sizing: border-box;
+                    margin: 0 auto;
+                    transition: all .15s ease-in-out;
+                    &:hover {
+                        background-color: #fff;
+                        border-color: transparent;
+                        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+                    }
+                }
+            }
+        }
+    }
+    .service-box {
+        @include wireframe;
+        padding-bottom: 120px;
+        .service-type {
+            width: 50%;
+            height: 440px;
+            padding: 0 30px;
+            display: inline-block;
+            box-sizing: border-box;
+            .box {
+                text-align: center;
+                width: 100%;
+                margin: 0 auto;
+                height: 440px;
+                border: 1px solid #dbdbdb;
+                .box-img {
+                    width: 100%;
+                    height: 320px;
+                }
+                .box-text {
+                    padding: 30px 0;
+                    .title {
+                        font-size: 2rem;
+                        font-weight: bold;
+                        color: #333;
+                    }
+                    .sub-title {
+                        margin-top: 10px;
+                        font-size: 1.333rem;
+                        font-weight: normal;
+                        color: #777;
+                    }
+                }
+            }
+        }
+    }
+    .photo-review {
+        @include wireframe;
+        padding-bottom: 160px ;
+    }
+
+    .banner {
+        @include wireframe;
+        margin-top: 120px;
+        // border: 1px solid black;
+        flex-direction: column;
+        text-align: center;
+
+
+        .title {
+            font-size: 2.833rem;
+            color: #222;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .sub-title {
+            margin-bottom: 40px;
+            font-size: 1.5rem;
+            font-weight: lighter;
+            color: #555;
+        }
+        .text {
+            font-size: 2.167rem;
+            font-weight: bold;
+        }
+    }
+}
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: $min-width;
+}

@@ -1,0 +1,68 @@
+@import '../../styles/Root.scss';
+
+$pd-none: true;
+$value1: -71px;
+$value2: 71px;
+.menu-list {
+    box-sizing: border-box;
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        clear: both;
+    }
+}
+html {
+    body {
+        .menu-item {
+            @include animation(0.5s, fadeIn);
+            display: block;
+            float: left;
+            box-sizing: border-box;
+            width: 290px;
+            margin: 0 20px;
+            margin-top: 40px;
+            cursor: pointer;
+        
+            .menu-img {
+                img {
+                    width: 290px;
+                    height: 344px;
+                }
+            }
+        
+            //메뉴 정보 텍스트 영역
+            .menu-info {
+                width: 100%;
+                padding-top: 40px;
+                text-align: center;
+                .menu-title {
+                    font-size: 1.667rem;
+                    color: #222;
+                    font-weight: normal;
+                    margin-bottom: 10px;
+                }
+                .menu-price {
+                    font-size: 2rem;
+                    color: #222;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@include keyframe(fadeIn) {
+    from {
+        filter: blur(100px);
+    }
+    to {
+        filter: blur(0);
+    }
+}
+
+.pd-box {
+    padding: 0 20px;
+}

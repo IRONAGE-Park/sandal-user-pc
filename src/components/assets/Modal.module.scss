@@ -1,0 +1,71 @@
+
+.modal {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 360px;
+    padding-bottom: 56px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    line-height: 1.5;
+
+    z-index: -1;
+    visibility: hidden;
+    &.open {
+        z-index: 3000;
+        visibility: visible;
+    }
+    .area {
+        width: 100%; height: 100%;
+        border: solid 1px #dbdbdb;
+        .content {
+            text-align: center;
+            margin-top: 60px;
+            padding: 0 20px;
+            word-break: keep-all;
+            .title {
+                margin-bottom: 50px;
+                font-size: 1.833rem;
+                color: #222;
+            }
+            .text {
+                margin-bottom: 70px;
+                font-size: 1.333rem;
+                color: #555;
+            }
+        }
+    }
+
+    .bottom {
+        position: absolute;
+        display: table;
+        left: 0; bottom: 0;
+        width: 100%; height: 56px;
+
+        .button {
+            width: 100%; height: 100%;
+            font-size: 1.5rem;
+            border: solid 1px #dbdbdb;
+            border-top: none;
+            &.active {
+                border: none;
+                font-weight: bold;
+                background-color: #007240;
+                color: #fff;
+            }
+        }
+    }
+    &.confirm {
+        .button {
+            width: 50%;
+            &:first-child {
+                border-bottom-left-radius: 10px;
+            }
+            &:last-child {
+                border-bottom-right-radius: 10px;
+            }
+        }
+    }
+}

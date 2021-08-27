@@ -1,0 +1,176 @@
+@import '../../styles/Modal.scss';
+
+.dialog > div > div {
+    max-width: 600px !important;
+    min-width: 600px !important;
+}
+.title-bar {
+    position: relative;
+    .title {
+        @include modal-title;
+    }
+    .close {
+        @include close-icon;
+    }
+}
+.modal-content {
+    @include modal-content;
+    .label {
+        color: #222;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .confirm {
+        text-align: center;
+        .btn {
+            border: 1px solid $main-color;
+            border-radius: 36px;
+            box-sizing: border-box;
+            width: 260px;
+            height: 48px;
+            font-size: 1.333rem;
+            font-weight: bold;
+            color: $main-color;
+            margin-top: 40px;
+            &::after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                clear: both;
+            }
+        }
+    }
+
+    .container {
+        position: relative;
+        .guide {
+            width: 250px;
+            &.logo {
+                .input-area {
+                    .input-logo {
+                        width: 100%; height: 40px;
+                        background-color: #F9F9F9;
+                        border: solid 1px #DBDBDB;
+                        border-radius: 2px;
+                        .filelabel {
+                            width: 100%; height: 100%;
+                            display: table;
+                            font-size: 1.333rem;
+                            .text {
+                                display: table-cell;
+                                vertical-align: middle;
+                                text-align: center;
+                            }
+                        }
+                        .filebox {
+                            display: none;
+                        }
+                    }
+                    .filename {
+                        box-sizing: border-box;
+                        padding: 8px;
+                        height: 40px;
+                        font-size: 1.167rem;
+                    }
+                }
+            }
+            &.template {
+                width: 100%;
+            }
+            &.phrase {
+                .input-phrase {
+                    resize: none; outline: none;
+                    display: block;
+                    font: inherit;
+                    font-size: 1.167rem;
+                    box-sizing: border-box;
+                    width: 100%; height: 148px;
+                    border: solid 1px #EBEBEB;
+                    border-radius: 2px;
+                    padding: 10px;
+                }
+            }
+            &.preview {
+                position: absolute;
+                right: 0; bottom: 0;
+                .preview {
+                    width: 250px; height: 260px;
+                    background-color: rgba(0, 0, 0, 0.05);
+                    border-radius: 2px;
+                    border: solid 1px #EBEBEB;
+                    .input-preview {
+                        width: 100%; height: 100%;
+                        position: relative;
+                        .circle {
+                            position: absolute;
+                            display: table;
+                            top: 50%; left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: #fff;
+                            border-radius: 50%;
+                            box-sizing: border-box;
+                            border: solid 1px #f9f9f9;
+                            .box {
+                                display: table-cell;
+                                vertical-align: middle;
+                                color: #dbdbdb;
+                                position: absolute;
+                                &.image {
+                                    .name {
+                                        font-size: 1.167rem;
+                                        font-weight: bold;
+                                    }
+                                    .logo {
+                                        max-width: 50px;
+                                        max-height: 50px;
+                                    }
+                                }
+                                &.text {
+                                    .phrase {
+                                        margin-top: 6px;
+                                        font-size: 0.667rem;
+                                        white-space: normal;
+                                        word-break: normal;
+                                        box-sizing: border-box;
+                                        width: 100%;
+                                        padding: 0 10px;
+                                    }
+                                }
+                                &.left {
+                                    top: 50%; right: 50%;
+                                    transform: translateY(-50%);
+                                }
+                                &.right {
+                                    top: 50%; left: 50%;
+                                    transform: translateY(-50%);
+                                }
+                                &.top {
+                                    width: 100%;
+                                    left: 50%; bottom: 50%;
+                                    transform: translateX(-50%);
+                                }
+                                &.bottom {
+                                    width: 100%;
+                                    left: 50%; top: 50%;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                        }
+                        .preview_out {
+                            width: 160px; height: 160px;
+                            .preview_in {
+                                padding: 15px;
+                                width: 152px; height: 152px;
+                                border-color: #dbdbdb;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

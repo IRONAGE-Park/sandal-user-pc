@@ -1,0 +1,92 @@
+@import '../../styles/Root.scss';
+.footer {
+    height: 250px;
+    background-color: #f9f9f9;
+    .content {
+        border-top: 1px solid #ebebeb;
+        border-bottom: 1px solid #ebebeb;
+        height: 64px;
+        background-color: #fff;
+        .title {
+            @include wireframe;
+            height: 100%;
+            .tos {
+                font-size: 1.333rem;
+                height: 64px;
+                display: table;
+                float: left;
+                .text1 {
+                    display: table-cell;
+                    vertical-align: middle;
+                    color: #777;
+                    a {
+                        text-decoration: none;
+                        color: #777;
+                        font-size: 1.333rem;
+                        font-weight: 500;
+                        & + a {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+            .sns {
+                height: 64px;
+                float: right;
+                display: table;
+                .icon-button {
+                    width: 64px; height: 64px;
+                    display: table-cell;
+                    vertical-align: middle;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        .context {
+            @include wireframe;
+            height: 186px;
+            .contact-table {
+                width: 100%;
+                height: 100%;
+                display: table;
+                .cell {
+                    font-size: 1.333rem;
+                    display: table-cell;
+                    vertical-align: middle;
+                    color: #222;
+                    .text {
+                        font-size: 2.167rem;
+                        margin-bottom: 15px;
+                    }
+                    .number {
+                        font-weight: bold;
+                        font-size: 3.333rem;
+                    }
+
+                    .support {
+                        white-space: nowrap;
+                        color: #222;
+                    }
+                    .info, .address {
+                        white-space: nowrap;
+                        color: #999;
+                    }
+                    .copyright {
+                        white-space: nowrap;
+                        color: #818181;
+                    }
+                    .have-divider::after {
+                        content: '';
+                        display: inline-block;
+                        width: 0px; height: 12px;
+                        border-left: solid 1px #DBDBDB;
+                        margin: 0 20px;
+                    } 
+                    & > p {
+                        margin: 8px 0; 
+                    }
+                }
+            }
+        }
+    }
+}

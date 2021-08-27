@@ -1,0 +1,222 @@
+@import '../../styles/Root.scss';
+
+.container {
+    @include wireframe;
+    .content {
+        &.sign-in {
+            width: 480px;
+        }
+        &.complete {
+            width: 480px;
+        }
+        width: 670px;
+        position: relative;
+        @include content;
+        padding-top: 73px;
+        padding-bottom: 85px;
+        .title {
+            color: #222;
+            width: 100%;
+            margin: 0 auto;
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 65px;
+        }
+        .user-input {
+            input {
+                width: 100%;
+                height: 64px;
+                outline: none;
+                border: 1px solid #ccc;
+                background-color: #fff;
+                border-radius: 10px;
+                padding-left: 20px;
+                box-sizing: border-box;
+                margin-bottom: 12px;
+
+                font-size: 1.333rem;
+
+                &::placeholder {
+                    color: #ccc;
+                    font-weight: 500;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .sns-box {
+            .social-login {
+                position: relative;
+                padding-top: 60px;
+                text-align: center;
+                .text {
+                    color: #222;
+                    font-size: 1.667rem;
+                    font-weight: 500;
+                    background-color: #fff;
+                    z-index: 900;
+                    display: inline-block;
+                    position: absolute;
+                    top: 80%;
+                    left: 50%;
+                    width: 140px;
+                    text-align: center;
+                    transform: translateX(-50%);
+                }
+                .line {
+                    border: 1px solid #ebebeb;
+                    border-radius: 2px;
+                    width: 100%;
+                    position: absolute;
+                    z-index: 5;
+                }
+            }
+        }
+    }
+}
+
+.util {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    display: table;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    clear: both;
+    .keep-mail {
+        float: left;
+        display: inline;
+    }
+    .forgot-mail {
+        padding: 5px 0;
+        float: right;
+        display: inline;
+    }
+}
+
+.sub-text {
+    font-size: 1.333rem;
+    color: #555;
+    font-weight: 500;
+    line-height: 1.2;
+    position: relative;
+    cursor: pointer;
+}
+
+.social {
+    margin: 28px auto;
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .sns {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 20px 0 20px 0;
+        img {
+            width: 80px; height: 80px;
+            transition: all .15s ease-in-out;
+            border-radius: 50%;
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+
+            }
+        }
+    }
+}
+
+.agree {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    border-top: 2px solid #ebebeb;
+    border-bottom: 2px solid #ebebeb;
+    margin: 60px 0;
+    padding: 40px 0;
+    .const {
+        max-width: 130px;
+        min-width: 130px;
+        font-size: 1.667rem;
+        font-weight: 500;
+        padding-left: 13px;
+        color: #222222;
+    }
+    .all {
+        margin-bottom: 40px;
+        label {
+            font-size: 1.667rem;
+            font-weight: bold;
+            color: #222;
+        }
+    }
+    //SMS 알림
+    .sms {
+        .sub-text {
+            label {
+                width: 100%;
+                font-size: 1.167rem;
+                font-weight: normal;
+                color: #777;
+                padding-left: 49px;
+            }
+        }
+    }
+}
+
+.chk-box {
+    & + & {
+        margin-top: 20px;
+    }
+}
+//회원가입창 비밀번호 일치 불일치
+.compare {
+    font-size: 1.167rem;
+    padding-left: 143px;
+    color: #a61332;
+    margin-bottom: 60px;
+    overflow: hidden;
+    transition: all 0.15s ease-in-out;
+    height: 20px;
+    &.on {
+        color: $main-color;
+    }
+    &.not_view {
+        height: 0px;
+    }
+}
+
+.divider {
+    width: 100%;
+    padding: 15px;
+}
+
+// 회원정보 찾기 링크
+.link-box {
+    width: 100%;
+    height: 192px;
+    border: 0px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .item {
+        margin: 0 20px 0 20px;
+        width: 200px;
+        height: 80%;
+        cursor: pointer;
+        // border: 1px solid black;
+    }
+}
+.btn {
+    padding-bottom: 160px;
+}
+.pd-box {
+    padding-left: 94px;
+    padding-right: 94px;
+}

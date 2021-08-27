@@ -1,0 +1,57 @@
+$max-width: 1280px;
+$min-width: 1280px - 48px;
+$font-size: 12px;
+$mg-top: 80px;
+$mg-top40: 40px;
+$pd-top: 80px;
+$pd-top40: 40px;
+$padding-all: 24px;
+$padding-side: 0 24px;
+$main-color: #007246;
+$normal-color: #999999;
+$border-radius: 10px;
+
+@mixin padding-side {
+    padding: 0 24px;
+}
+
+@mixin content {
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 260px;
+}
+
+@mixin title {
+    color: #222;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+@mixin wireframe {
+    max-width: $max-width;
+    min-width: $min-width;
+    // padding: 0 24px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@mixin animation($delay, $name) {
+    animation: $name 0.2s linear;
+}
+
+@mixin keyframe($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+
+@mixin default_font($font-size){
+    font-size:$font-size;
+    font-weight: bold;
+    color:#222;
+}

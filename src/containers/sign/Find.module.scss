@@ -1,0 +1,86 @@
+@import '../../styles/Root.scss';
+
+.container {
+    @include wireframe;
+    .content {
+        width: 480px;
+        @include content;
+    }
+    .title {
+        @include title;
+    }
+    .box {
+        height: 240px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 60px;
+        .text {
+            line-height: 1.5;
+            font-size: 1.667rem;
+            color: #222;
+            .user {
+                display: inline-block;
+                font-weight: bold;
+            }
+        }
+        &.pw {
+            height: 160px;
+        }
+    }
+    .item {
+        width: 100%;
+        border: 1px solid $main-color;
+        color: $main-color;
+        font-size: 1.667rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        height: 64px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .input {
+        padding-bottom: 80px;
+        .change-input {
+            width: 100%; height: 56px;
+            outline: none;
+            box-sizing: border-box;
+            padding-left: 16px;
+            font-size: 1.333rem;
+            font-weight: 500;
+            margin-top: 10px;
+            border-radius: 2px;
+            border: solid 1px #ccc;
+            &::placeholder {
+                color: #ccc;
+            }
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+//회원가입창 비밀번호 일치 불일치
+.compare {
+    margin-top: 16px;
+    font-size: 1.167rem;
+    color: #a61332;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: all 0.15s ease-in-out;
+    height: 20px;
+    &.on {
+        font-size: 1.167rem;
+        color: $main-color;
+        margin-bottom: 30px;
+    }
+    &.not_view {
+        height: 0px;
+    }
+}

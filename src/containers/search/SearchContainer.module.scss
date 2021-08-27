@@ -1,0 +1,51 @@
+@import '../../styles/Root.scss';
+
+.container {
+    @include wireframe;
+
+    .content {
+        padding-top: 120px;
+        padding-bottom: 160px;
+        position: relative;
+
+        .search {
+            margin-bottom: 50px;
+            .text {
+                border-bottom: solid 2px #222;
+                padding-bottom: 20px;
+                color: #222;
+                font-size: 1.667rem;
+                b {
+                    margin-right: 5px;
+                }
+            }
+        }
+        .empty {
+            padding-top: 40px;
+            text-align: center;
+            box-sizing: border-box;
+            height: 560px;
+            svg {
+                margin-bottom: 20px;
+            }
+            .text {
+                font-size: 2rem;
+                color: #222;
+            }
+            .sub-text {
+                font-size: 1.333rem;
+                color: #999;
+                margin-top: 10px;
+            }
+            .back-button {
+                margin-top: 90px;
+                width: 360px; height: 64px;
+                border-radius: 100px;
+                border: solid 2px #007246;
+                font-size: 1.667rem;
+                font-weight: bold;
+                color: #007246;
+            }
+        }
+    }
+}

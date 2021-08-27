@@ -1,0 +1,19 @@
+@import '../../styles/Root.scss';
+
+.error{
+    max-width: $max-width;
+    width: 100%;
+    height: 500px;
+    margin: 200px auto;
+    border: 0px solid red;
+    .context{
+        border: 0px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .logo img{
+            width: 300px;
+        }
+    }
+}

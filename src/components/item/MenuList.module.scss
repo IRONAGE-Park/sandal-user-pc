@@ -1,0 +1,29 @@
+@import '../../styles/Root.scss';
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    min-height: 500px;
+    padding: 40px 0;
+}
+.arrow {
+    border: 1px solid blue;
+}
+
+.empty{
+    margin-top: 40px;
+    margin-bottom: 60px;
+
+    width: 290px;
+    height: 344px;
+    background-color: rgb(243, 243, 243); 
+    @include animation(0.1s, fadeIn);
+
+}
+@include keyframe(fadeIn) {
+    from {
+        filter: blur(100px);
+    }
+    to {
+        filter: blur(0);
+    }
+}

@@ -1,0 +1,64 @@
+.box {
+    margin-top: 80px;
+    .table {
+        border-top: solid 2px #222;
+        border-bottom: solid 1px #dbdbdb;
+        margin-bottom: 50px;
+
+        .row {
+            display: table;
+            text-align: center;
+            width: 100%; height: 70px;
+            color: #222;
+            text-decoration: none;
+            transition: background .2s ease-in-out;
+            &:hover {
+                background-color: #f9f9f9;
+            }
+        }
+        .head {
+            display: table;
+            text-align: center; 
+            width: 100%; height: 70px;
+            color: #222;
+            border-bottom: solid 1px #dbdbdb;
+        }
+        .content {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 40px 60px;
+            min-height: 250px;
+            font-size: 1.333rem;
+            color: #555;
+            img {
+                max-width: 100%;
+            }
+        }
+        .id, .title, .created {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .id {
+            width: 150px;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        .title {
+            width: 550px;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        .created {
+            width: 200px;
+            font-size: 1.333rem;
+            color: #555;
+        }
+    }
+}
+
+
+.column {
+    & + & {
+        border-top: solid 1px #DBDBDB;
+    }
+}

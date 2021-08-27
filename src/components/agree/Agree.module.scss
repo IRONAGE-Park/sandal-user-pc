@@ -1,0 +1,11 @@
+.table {
+    border-top: solid 2px #222;
+    border-bottom: solid 1px #DBDBDB;
+    margin-top: 80px;
+    .wrap {
+        padding: 60px 0;
+        word-break: keep-all;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+}

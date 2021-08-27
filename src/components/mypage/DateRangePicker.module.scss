@@ -1,0 +1,62 @@
+@import '../../styles/Root.scss';
+
+.select-date {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    .date {
+        display: flex;
+        width: 320px;
+        .date-box {
+            font-size: 1.333rem;
+            display: block;
+            width: 80px; height: 40px;
+            border: 1px solid #ebebeb;
+            text-align: center;
+            transition: all .3s ease-in-out;
+            &.select {
+                border-color: #222;
+            }
+            &:hover {
+                background-color: #f9f9f9;
+            }
+        }
+    }
+    .date-input-box {
+        display: flex;
+        align-items: center;
+        .text {
+            font-size: 1.5rem;
+            padding-right: 10px;
+        }
+        .input {
+            input {
+                width: 144px;
+                height: 40px;
+                padding: 10px 20px;
+                font-size: 1.333rem;
+                border: 1px solid #ebebeb;
+                outline: none;
+                box-sizing: border-box;
+            }
+        }
+        .btn {
+            margin-left: 20px;
+            color: #fff;
+            background-color: $main-color;
+            width: 156px;
+            height: 40px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        .line {
+            width: 8px;
+            height: 1px;
+            margin: 0 8px;
+            border-top: 1px solid #222;
+            box-sizing: border-box;
+        }
+    }
+}

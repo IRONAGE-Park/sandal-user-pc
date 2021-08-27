@@ -1,0 +1,127 @@
+@import '../../styles/Root.scss';
+$header-height: 100px;
+.header {
+    height: 156px;
+    color: black;
+    min-width: $min-width;
+    margin: 0 auto;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+    .sub {
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+        height: 55px;
+        .content {
+            // padding: 16px 24px;
+            padding: 16px 0;
+            max-width: $max-width;
+            min-width: $min-width;
+            margin: 0 auto;
+            .addr-store {
+                display: flex;
+                flex-direction: row;
+                .info {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    &:first-child {
+                        padding-right: 10px;
+                    }
+                    img {
+                        cursor: pointer;
+                        padding-right: 10px;
+                    }
+                    .text {
+                        cursor: pointer;
+                        padding-right: 40px;
+                        color: #555;
+                        font-size: 1.333rem;
+                        font-weight: normal;
+                        max-width: 300px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+
+                .auth {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    .box {
+                        cursor: pointer;
+                        margin-right: 34px;
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header-nav {
+        display: flex;
+        height: $header-height;
+        @include wireframe;
+
+        .header-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: $header-height;
+            .logo {
+                cursor: pointer;
+            }
+        }
+
+        .header-input {
+            display: flex;
+            align-items: center;
+            height: $header-height;
+            .input {
+                position: relative;
+            }
+            .search {
+                width: 320px;
+                box-sizing: border-box;
+                border: 2px solid #ebebeb;
+                border-radius: 100px;
+                height: 48px;
+                outline: none;
+                padding-left: 24px;
+                transition: all 0.15s ease-in-out;
+                &:focus {
+                    border-color: $main-color;
+                }
+            }
+            .icon {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20px;
+            }
+        }
+    }
+}
+
+.header ul {
+    list-style: none;
+    display: table;
+    width: 100%;
+}
+.header li {
+    display: table-cell;
+    vertical-align: middle;
+    width: 16.6666667%;
+    text-align: center;
+    &:first-child {
+        text-align: left;
+        margin-left: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}

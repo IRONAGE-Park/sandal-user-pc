@@ -1,0 +1,69 @@
+@import '../../styles/Root.scss';
+.order-item {
+    // border:1px solid red;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    &.space {
+        margin-top: 20px;
+        // border-top: 1px solid #ccc;
+        // border-bottom: 1px solid #ccc;
+    }
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    .menu-img {
+        float: left;
+        img {
+            width: 100px; height: 100px;
+        }
+    }
+    .menu-info {
+        padding-left: 140px;
+        position: relative;
+        line-height: 1.5;
+        padding-right: 280px;
+        word-break: keep-all;
+        .name {
+            font-size: 1.667rem;
+            color: #222;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        .options {
+            font-size: 1.333rem;
+            color: #555;
+            padding-bottom: 20px;
+            .medium {
+                font-weight: 500;
+            }
+        }
+        .quanity {
+            font-size: 1.5rem;
+            span {
+                font-weight: bold;
+            }
+        }
+        .price {
+            position: absolute;
+            right: 40px;
+            bottom: 0px;
+            @include default_font(24px);
+        }
+    }
+    & + & {
+        border-top: 1px solid #ccc;
+    }
+    .center-price {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        width: 240px;
+        height: 144px;
+        text-align: center;
+        line-height: 144px;
+        border-left: 1px solid #ebebeb;
+        transform: translateY(-50%);
+        @include default_font(24px);
+    }
+}

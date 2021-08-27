@@ -1,0 +1,33 @@
+.table {
+    width: 100%;
+    border: solid 1px #222;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 10px;
+    font-weight: bold;
+    th, td {
+        border: solid 1px #222;
+    }
+    .bold {
+        font-weight: bold;
+    }
+    .price {
+        text-align: right;
+    }
+    .name {
+        text-align: left;
+    }
+    .value {
+        font-weight: 500;
+    }
+    tbody {
+        td {
+            padding: 0 8px;
+        }
+    }
+    .alert {
+        vertical-align: bottom;
+        font-weight: 100;
+    }
+}

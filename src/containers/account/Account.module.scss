@@ -1,0 +1,104 @@
+@import '../../styles/Root.scss';
+.container {
+    color: #222;
+    .content {
+        padding-top: 80px;
+        .table {
+            border-top: 2px solid #222;
+            padding-top: 60px;
+            .cell {
+                display: flex;
+                align-items: center;
+                height: 60px;
+                &:first-child {
+                    padding-top: 0;
+                }
+                &.line {
+                    padding-bottom: 60px;
+                    border-bottom: 1px solid #dbdbdb;
+                }
+                .label {
+                    @include default_font(1.667rem);
+                    min-width: 150px;
+                }
+                .user-input {
+                    padding-left: 20px;
+                    width: 280px;
+                    font-size: 1.667rem;
+                    height: 48px;
+                    outline: none;
+                    box-sizing: border-box;
+                    border: 1px solid #dbdbdb;
+                    transition: all .15s ease-in-out;
+                    &:focus {
+                        border-color: #222;
+                    }
+                }
+                .user-value {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.667rem;
+                    span {
+                        padding-left: 14px;
+                    }
+                }
+                .user-change {
+                    box-sizing: border-box;
+                    width: 280px;
+                    height: 48px;
+                    text-align: center;
+                    border: 1px solid #ccc;
+                    background-color: #f9f9f9;
+                    font-size: 1.667rem;
+                    line-height: 48px;
+                    border-radius: 10px;
+                    transition: all .15s ease-in-out;
+                    &:hover {
+                        background-color: #fff;
+                        border-color: transparent;
+                        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+                    }
+                }
+            }
+        }
+        .btn {
+            padding: 80px 350px;
+            .update {
+                width: 240px;
+                height: 64px;
+                border: 1px solid $main-color;
+                border-radius: 36px;
+                text-align: center;
+                color: $main-color;
+                font-size: 1.667rem;
+                line-height: 64px;
+                font-weight: bold;
+                transition: all .15s ease-in-out;
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+                }
+            }
+        }
+    }
+}
+.pd-bottom {
+    padding-bottom: 80px !important;
+}
+
+
+.compare {
+    font-size: 1.167rem;
+    padding-left: 143px;
+    color: #a61332;
+    margin-bottom: 60px;
+    overflow: hidden;
+    transition: all 0.15s ease-in-out;
+    height: 20px;
+    &.on {
+        color: $main-color;
+    }
+    &.not_view {
+        height: 0px;
+    }
+}

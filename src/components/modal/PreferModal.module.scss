@@ -1,0 +1,133 @@
+@import '../../styles/Modal.scss';
+
+
+.dialog > div > div {
+    max-width: 540px !important;
+    min-width: 540px !important;
+}
+.title-bar {
+    position: relative;
+    .title {
+        @include modal-title;
+    }
+    .close {
+        @include close-icon;
+    }
+}
+.modal-content {
+    @include modal-content;
+
+    .label {
+        @include modal-label;
+    }
+
+    .btn {
+        border: 1px solid $main-color;
+        border-radius: 36px;
+        box-sizing: border-box;
+        width: 260px;
+        height: 48px;
+        font-size: 1.333rem;
+        font-weight: bold;
+        line-height: 48px;
+        text-align: center;
+        color: $main-color;
+        float: right;
+        margin-top: 40px;
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            clear: both;
+        }
+    }
+}
+
+.modal-input-box {
+
+    color: #222;
+    margin-bottom: 40px;
+    span {
+        padding: 0 8px;
+        font-size: 1.333rem;
+        font-weight: normal;
+    }
+    select {
+        color: #222;
+        width: 100%;
+        height: 48px;
+        font-size: 1.333rem;
+        font-weight: normal;
+        padding: 10px; /* 여백으로 높이 설정 */
+        padding-left: 40px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #222;
+        border-radius: 0px;
+    }
+    .value-input {
+        color: #222;
+        width: 350px;
+        height: 48px;
+        padding: 10px; /* 여백으로 높이 설정 */
+        border: 1px solid #dbdbdb;
+        font-size: 1.5rem;
+        text-align: right;
+        border-radius: 2px;
+        box-sizing: border-box;
+        outline: none;
+    }
+}
+
+.box {
+    width: 100%;
+    height: 48px;
+    margin-top: 40px;
+    display: table;
+    vertical-align: middle;
+    .label {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .counter {
+        display: table-cell;
+        position: relative;
+        width: 350px;
+        height: 48px;
+        border: 1px solid #dbdbdb;
+        border-radius: 2px;
+        box-sizing: border-box;
+        .count-box {
+            width: 350px;
+            height: 48px;
+            color: #000;
+            font-size: 1.667rem;
+            .decrement {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                top: 50%;
+                left: 20px;
+                transform: translateY(-50%);
+            }
+            .increment {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+            }
+            .value {
+                position: absolute;
+                top: 50%; left: 50%;
+                font-size: 1.5rem;
+                text-align: center;
+                border: none;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

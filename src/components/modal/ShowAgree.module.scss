@@ -1,0 +1,35 @@
+@import '../../styles/Modal.scss';
+
+.dialog {
+    .title {
+        position: relative;
+        background-color: #007246;
+        h2 {
+            font-size: 2rem;
+            color: #fff;
+        }
+        .close {
+            @include close-icon;
+        }
+    }
+    .content {
+        padding: 16px 0;
+        overflow: auto;
+        white-space: pre-wrap;
+        font-size: 1.5rem;
+        * {
+            margin: 0;
+        }
+    }
+    .button-area {
+        padding: 0;
+        .button {
+            width: 100%;
+            height: 64px;
+            font-size: 2.333rem;
+            color: #fff;
+            background-color: #007246;
+            border-radius: 0;
+        }
+    }
+}

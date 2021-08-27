@@ -1,0 +1,22 @@
+@import '../../styles/Root.scss';
+
+html, body {
+    .tab-item {
+        height: 64px;
+        cursor: pointer;
+        width: 100% !important;
+        font-size: 1.667rem !important;
+        max-width: none !important;
+        flex : 1 1 auto !important;
+        border-bottom: solid 2px #000;
+        box-sizing: border-box !important;
+        color: #999;
+        min-width: auto !important;
+        font-weight: normal;
+
+    }
+    :global(.Mui-selected) {
+        color: #222;
+        font-weight: bold;
+    }
+}

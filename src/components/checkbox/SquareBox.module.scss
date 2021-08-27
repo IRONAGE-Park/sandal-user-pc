@@ -1,0 +1,40 @@
+.check {
+    display: flex;
+    align-items: center;
+
+    .link {
+        font-size: 1.333rem;
+        color: #999;
+        font-weight: normal;
+        text-decoration-line: underline;
+        margin-left: 10px;
+    }
+}
+.check input[type='checkbox'] {
+    display: none;
+}
+
+.check label {
+    width: 100%;
+}
+.label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.check input[type='checkbox'] + label svg {
+    margin-right: 10px;
+}
+
+.sub-text {
+    display: flex;
+    align-items: center;
+    font-size: 1.333rem;
+    color: #555;
+    font-weight: normal;
+    position: relative;
+    cursor: pointer;
+}
+.link {
+    cursor: pointer;
+}

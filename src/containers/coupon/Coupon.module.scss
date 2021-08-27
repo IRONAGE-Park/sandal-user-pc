@@ -1,0 +1,50 @@
+@import '../../styles/Root.scss';
+.container {
+    .content {
+        .tab-title {
+            border-bottom: 2px solid #222;
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            padding-top: 80px;
+            padding-bottom: 20px;
+            &.border_none {
+                border: none;
+            }
+        }
+    }
+    .input-coupon {
+        display: flex;
+        align-items: center;
+        height: 64px;
+        margin-top: 80px;
+        position: relative;
+        .text {
+            width: 220px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            padding-right: 40px;
+        }
+        .code {
+            width: 100%;
+            height: 64px;
+            border: 2px solid #222;
+            box-sizing: border-box;
+            padding-left: 40px;
+            font-size: 16px;
+            &::placeholder {
+                color: #ccc;
+            }
+        }
+        .btn {
+            cursor: pointer;
+            position: absolute;
+            top: 50%; transform: translateY(-50%);
+            right: 40px;
+            font-size: 18px;
+            color: #222;
+            font-weight: bold;
+        }
+    }
+}

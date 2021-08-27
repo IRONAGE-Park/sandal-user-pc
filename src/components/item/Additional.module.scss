@@ -1,0 +1,45 @@
+@import '../../styles/Root.scss';
+
+.additional-item {
+    font-size: $font-size;
+
+    .label {
+        cursor: pointer;
+        vertical-align: middle;
+        margin: 5px 0;
+        font-size: 1.5rem;
+        color: #222;
+
+        transition: font-weight 0.15s ease-in-out;
+        span {
+            padding-left: 15px;
+            font-size: 1.667rem;
+            color: #222;
+        }
+        span,
+        svg {
+            vertical-align: middle;
+        }
+        &:hover {
+            font-weight: bold;
+        }
+    }
+
+    input[type='checkbox'] + label svg {
+        margin-right: 20px;
+    }
+
+    .sub-text {
+        font-size: 1.5rem;
+        color: #999999;
+        line-height: 1.2;
+        position: relative;
+        cursor: pointer;
+    }
+    & + & {
+        margin-top: 15px;
+    }
+}
+input[type='checkbox'] {
+    display: none;
+}

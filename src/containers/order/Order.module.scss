@@ -1,0 +1,391 @@
+@import '../../styles/Root.scss';
+
+$pd: 20px;
+.container {
+    @include wireframe;
+    .content {
+        @include content;
+        padding-bottom: 180px;
+        overflow: hidden;
+        .title {
+            @include title;
+        }
+
+        .delivery-info-box {
+            float: left;
+            width: 850px;
+            .info-box {
+                .sub-title {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    border-bottom: 2px solid #222;
+                    padding: $pd;
+                }
+                .receiver-box {
+                    padding-top: 18px;
+                    padding-left: 24px;
+                }
+                .user-info {
+                    padding-top: 36px;
+                    padding-left: $pd;
+                    padding-right: $pd;
+                    padding-bottom: 100px;
+                    color: #555555;
+
+                    select {
+                        border: 1px solid #dbdbdb;
+                        outline: none;
+                        height: 56px;
+                        padding: 0;
+                        padding-left: $pd;
+                        width: 100%;
+                        transition: all 0.15s ease-in-out;
+                        &:focus {
+                            border-color: #222;
+                        }
+                    }
+                    input {
+                        border: 1px solid #dbdbdb;
+                        outline: none;
+                        font-size: 1.5rem;
+                        height: 56px;
+                        box-sizing: border-box;
+                        padding: 0 $pd;
+                        transition: all 0.15s ease-in-out;
+                        &:focus {
+                            border-color: #222;
+                        }
+                    }
+
+                    .name {
+                        font-size: 2.167rem;
+                        font-weight: bold;
+                        padding-bottom: $pd;
+                    }
+                    .addr {
+                        font-size: 1.667rem;
+                        padding-bottom: $pd;
+                    }
+                    .hp {
+                        display: flex;
+                        padding-bottom: $pd;
+                        select {
+                            border: 1px solid #dbdbdb;
+                            width: 120px;
+                            height: 48px;
+                            outline: none;
+                            box-sizing: border-box;
+                            font-size: 1.667rem;
+                            padding: 0;
+                            padding-left: 20px;
+                            padding-right: 20px;
+
+                            transition: all 0.15s ease-in-out;
+                            &:focus {
+                                border-color: #222;
+                            }
+                        }
+                        .second {
+                            padding-left: 20px;
+                            input {
+                                border: 1px solid #dbdbdb;
+                                box-sizing: border-box;
+                                outline: none;
+                                font-size: 1.5rem;
+                                width: 160px;
+                                height: 48px;
+                                padding-left: 20px;
+                                transition: all .15s ease-in-out;
+                                &:focus {
+                                    border-color: #222;
+                                }
+                            }
+                        }
+                        .auth {
+                            width: 0;
+                            overflow: hidden;
+                            margin-left: 20px;
+                            position: relative;
+                            transition: width 0.3s ease-in-out;
+                            &.start {
+                                width: 150px;
+                            }
+                            .auth-input {
+                                width: 100%;
+                                height: 48px;
+                            }
+                        }
+                        .button-area {
+                            margin-left: 20px;
+                            .button {
+                                width: 140px;
+                                height: 100%;
+                                font-size: 1.5rem;
+                                border: solid 1px #007246;
+                                color: #007246;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    .input-hp {
+                        color: #222;
+                        font-size: 1.5rem;
+                        vertical-align: middle;
+                        cursor: pointer;
+                        span,
+                        svg {
+                            vertical-align: middle;
+                        }
+                        span {
+                            margin-left: 10px;
+                        }
+                    }
+                    .coupon {
+                        select {
+                            font-size: 1.333rem;
+                            color: #999999;
+                            transition: all .15s ease-in-out;
+                            &:focus {
+                                border-color: #222;
+                            }
+                        }
+                    }
+                    .date {
+                        display: flex;
+                        select {
+                            font-size: 1.667rem;
+                            border: 1px solid #dbdbdb;
+                            transition: all .15s ease-in-out;
+                            &:focus {
+                                border-color: #222;
+                            }
+                        }
+                        .first {
+                            input {
+                                cursor: pointer;
+                                font-size: 1.667rem;
+                                border: 1px solid #dbdbdb;
+                                width: 320px;
+                                background: url('../../components/svg/date/date.png')
+                                    no-repeat 90% 50% #fff;
+                                background-size: 24px 24px;
+                                transition: all 0.15s ease-in-out;
+                                &:focus {
+                                    border-color: #222;
+                                }
+                            }
+                        }
+                        .second {
+                            padding-left: $pd;
+                            width: 160px;
+                        }
+                    }
+
+                    .order-memo {
+                        .bar {
+                            padding-bottom: $pd;
+                            padding-top: 20px;
+                            position: relative;
+                            width: 100%;
+                            .text {
+                                font-weight: bold;
+                                font-size: 1.833rem;
+                                color: #222;
+                            }
+                            .check-box {
+                                position: absolute;
+                                right: 0;
+                                top: 20px;
+                            }
+                        }
+                        .memo-input {
+                            .input {
+                                font-size: 1.5rem;
+                                width: 100%;
+                                height: 56px;
+                                border: 1px solid #dbdbdb;
+                                box-sizing: border-box;
+                                outline: none;
+                                transition: all 0.15s ease-in-out;
+                                &:focus {
+                                    border-color: #222;
+                                }
+                            }
+                        }
+                    }
+
+                    .payments {
+                        display: flex;
+                        .payment-item {
+                            box-sizing: border-box;
+                            border: 1px solid #dbdbdb;
+                            width: 200px;
+                            height: 64px;
+                            color: #222;
+                            font-size: 1.5rem;
+                            transition: all 0.15s ease-in-out;
+                            &.check {
+                                border: 2px solid $main-color;
+                                color: $main-color;
+                                font-size: 1.667rem;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    .point {
+                        display: flex;
+                        align-items: center;
+                        .text {
+                            font-size: 1.833rem;
+                            color: #555;
+                            padding-right: $pd * 2;
+                        }
+                        .point-input {
+                            width: 280px;
+                            text-align: right;
+                            font-size: 1.5rem;
+                        }
+                        .btn {
+                            margin-left: $pd / 2;
+                            width: 160px;
+                            height: 56px;
+                            border: 1px solid #dbdbdb;
+                            box-sizing: border-box;
+                            text-align: center;
+                            font-size: 1.5rem;
+                            color: #222;
+                            line-height: 56px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .user-point {
+                        margin-top: 10px;
+                        padding-left: 180px;
+                        font-size: 1.5rem;
+                        color: #222;
+                        span {
+                            font-size: 1.667rem;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+
+        .order-info-box {
+            float: right;
+            border: 1px solid #dbdbdb;
+            position: relative;
+            width: 400px;
+            height: 1800px;
+            padding: 20px;
+            box-sizing: border-box;
+
+            .order-box-item {
+                box-sizing: border-box;
+                width: 358px;
+                padding: 20px;
+                padding-top: 25px;
+                padding-bottom: 62px;
+                .title {
+                    text-align: left;
+                    font-size: 2.333rem;
+                    color: #222;
+                    font-weight: bold;
+                }
+                .text-price {
+                    padding: 12px 0;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    .text {
+                        font-size: 1.5rem;
+                        text-align: left;
+                        width: 100%;
+                    }
+                    .price {
+                        width: 100%;
+                        font-size: 2rem;
+                        font-weight: bold;
+                        text-align: right;
+
+                        span {
+                            font-size: 1.667rem;
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+        }
+        .total-price {
+            border-top: 1px solid #999999;
+            padding-top: 35px;
+            padding-bottom: 60px;
+            padding-left: $pd;
+            padding-right: $pd;
+            display: flex;
+            align-items: center;
+
+            .text {
+                text-align: left;
+                font-size: 2.333rem;
+                color: #222;
+                font-weight: bold;
+                width: 100%;
+            }
+            .price {
+                color: $main-color;
+                font-weight: bold;
+                font-size: 2.667rem;
+                width: 100%;
+                text-align: right;
+                span {
+                    color: $main-color;
+                    font-size: 2.167rem;
+                    font-weight: normal;
+                }
+            }
+        }
+        .minimum-order {
+            font-size: 1.333rem;
+            text-align: right;
+            color: #777;
+        }
+    }
+}
+
+.agree {
+    margin-top: 60px;
+    padding: 0 20px;
+    padding-bottom: 40px;
+    .const {
+        max-width: 130px;
+        min-width: 130px;
+        font-size: 1.667rem;
+        font-weight: 500;
+        padding-left: 13px;
+        color: #222222;
+    }
+    .all {
+        margin-bottom: 40px;
+        label {
+            font-size: 1.667rem;
+            font-weight: bold;
+            color: #222;
+        }
+    }
+}
+
+.noauth-input {
+    width: 320px;
+}
+.chk-box {
+    & + & {
+        margin-top: 20px;
+    }
+}
+
+.pd-box {
+    padding: 20px 120px;
+}

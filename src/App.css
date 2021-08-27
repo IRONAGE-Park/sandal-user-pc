@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", 나눔고딕, "NanumGothic", "맑은 고딕", "Malgun Gothic", Ngothic, sans-serif;
+    letter-spacing: -0.05em;
+}
+
+html,
+body {
+    /* min-width: 1328px; */
+    min-width: 1280px;
+    font-size: 11px;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+input {
+    outline: none;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input[type='text']::-ms-clear {
+    display: none;
+}
+
+select {
+    /*ios대응*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    /*화살표 배경 넣기*/
+    background: url('../src/components/svg/select/select.svg') no-repeat 95% 50%  #fff;
+    /* background-size: 30px 10px; */
+    /*화살표 select박스 오른쪽 중앙 배치,배경 흰색*/
+}
+select::-ms-expand {
+    display: none; /* 화살표 없애기 for IE10, 11*/
+}

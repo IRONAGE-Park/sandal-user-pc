@@ -1,0 +1,32 @@
+@import '../../styles/Root.scss';
+.container {
+    width: 100%;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+}
+.slick-arrow .slick-prev {
+    border: 1px solid black;
+}
+
+.item {
+    @include animation(1s, fadeIn);
+
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 360px;
+}
+
+@include keyframe(fadeIn) {
+    from {
+        filter: blur(100px);
+    }
+    to {
+        filter: blur(0);
+    }
+}

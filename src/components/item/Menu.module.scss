@@ -1,0 +1,84 @@
+@import '../../styles/Root.scss';
+
+$pd-none: true;
+$value1: -71px;
+$value2: 71px;
+.menu-list {
+    box-sizing: border-box;
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        clear: both;
+    }
+}
+.menu-item {
+    @include animation(0.1s, fadeIn);
+
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 290px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    line-height: 1.4;
+    word-break: keep-all;
+    transition: all .15s ease-in-out;
+    cursor: pointer;
+
+    .menu-img {
+        img {
+            width: 290px;
+            height: 344px;
+        }
+    }
+
+    //메뉴 정보 텍스트 영역
+    .menu-info {
+        width: 100%;
+        padding-top: 20px;
+        .menu-title {
+            font-size: 1.833rem;
+            color: #222;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .menu-text {
+            font-size: 1.333rem;
+            width: 180px;
+            word-break: keep-all;
+            color: #999999;
+            margin-bottom: 20px;
+        }
+        .menu-price {
+            font-size: 2rem;
+            color: #222222;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+    }
+    &:hover {
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    }
+    & + & {
+        margin-left: 40px;
+    }
+    &:nth-child(4n + 1) {
+        margin-left: 0;
+    }
+}
+
+.pd-box {
+    padding: 0 10px;
+}
+
+@include keyframe(fadeIn) {
+    from {
+        filter: blur(100px);
+    }
+    to {
+        filter: blur(0);
+    }
+}

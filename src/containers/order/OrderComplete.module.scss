@@ -1,0 +1,167 @@
+@import '../../styles/Root.scss';
+
+$pd: 40px;
+.container {
+    @include wireframe;
+    .content {
+        @include content;
+        padding-bottom: 0;
+        .message {
+            padding: 0 350px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .title {
+                font-size: 3rem;
+            }
+            .msg {
+                padding-top: 60px;
+                padding-bottom: 48px;
+                font-size: 1.5rem;
+                line-height: 2;
+                font-weight: normal;
+                color: #777;
+                word-break: keep-all;
+            }
+            .order-number {
+                font-size: 1.667rem;
+            }
+            .btn {
+                padding-top: 80px;
+                padding-bottom: 120px;
+                .item {
+                    cursor: pointer;
+                    width: 320px;
+                    height: 64px;
+                    color: $main-color;
+                    border: 1px solid $main-color;
+                    font-size: 1.833rem;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    line-height: 64px;
+                }
+            }
+            .reject-reason {
+                margin-top: 20px;
+                color: #A61332;
+                &::before {
+                    content: '※';
+                    margin-right: 8px;
+                }
+                font-size: 1.833rem;
+            }
+        }
+    }
+    .view-content {
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 10;
+            height: 10;
+            overflow: hidden;
+            clear: both;
+        }
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #222;
+            padding: 20px;
+            border-bottom: 2px solid #222;
+        }
+
+        .order-view {
+            float: left;
+            width: 740px;
+            .order-list {
+                margin-top: 40px;
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+
+        .payment-view {
+            width: 500px;
+            float: right;
+            .box {
+                padding: 40px 20px;
+            }
+            .title {
+                font-size: 2rem;
+                font-weight: bold;
+                color: #222;
+                padding: 20px;
+                border-bottom: 2px solid #222;
+            }
+            .text-price {
+                padding-bottom: 20px;
+                display: flex;
+                .text {
+                    width: 100%;
+                    font-size: 1.667rem;
+                    font-weight: bold;
+                    color: #444;
+                    &.auto {
+                        width: 61%;
+                    }
+                }
+                .price {
+                    text-align: right;
+                    width: 100%;
+                    font-size: 1.5rem;
+                    color: #555;
+                }
+            }
+        }
+    }
+    .user-content {
+        .user-info {
+            padding-bottom: 90px;
+            .title {
+                font-size: 2rem;
+                font-weight: bold;
+                color: #222;
+                padding: 20px;
+                border-bottom: 2px solid #222;
+            }
+            .context {
+                padding: 40px;
+                .box {
+                    display: flex;
+                    padding-bottom: 20px;
+                    .text {
+                        font-size: 1.667rem;
+                        font-weight: bold;
+                        color: #444;
+                        min-width: 140px;
+                        padding-right: 20px;
+                    }
+                    .value {
+                        font-size: 1.5rem;
+                        font-weight: normal;
+                        color: #555;
+                    }
+                }
+            }
+        }
+        .order-cancle {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .btn {
+                width: 400px; height: 64px;
+                border: 1px solid #dbdbdb;
+                text-align: center;
+                font-size: 1.667rem;
+                border-radius: 20px;
+                color: #555;
+                font-weight: 500;
+                background-color: #ffffff;
+            }
+            padding-bottom: 160px;
+        }
+    }
+}

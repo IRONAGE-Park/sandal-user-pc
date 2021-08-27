@@ -1,0 +1,118 @@
+@import '../../styles/Root.scss';
+.load {
+    margin-bottom:170px;
+}
+
+.container {
+    @include wireframe;
+    .title {
+        padding-top: 120px;
+        @include title;
+    }
+    .bar {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #dbdbdb;
+        border-bottom: 2px solid #222;
+        .check {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 40px;
+
+            span {
+                font-size: 1.5rem;
+            }
+        }
+        .select {
+            border: 1px solid #dbdbdb;
+            width: 88px;
+            height: 34px;
+            text-align: center;
+            font-size: 1.333rem;
+            color: #222;
+            line-height: 34px;
+            margin-right: 40px;
+        }
+    }
+
+    .finally {
+        display: flex;
+        margin-top: 75px;
+        justify-content: center;
+        align-items: center;
+        height: 132px;
+        width: 100%;
+        border: 2px solid $main-color;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-size: 1.833rem;
+        color: #555;
+        .order-text {
+            font-size: 1.833rem;
+            padding-right: 20px;
+        }
+        .order-price {
+            font-size: 2.333rem;
+            font-weight: bold;
+            color: #222;
+            &.total {
+                color: $main-color;
+                font-size: 2.667rem;
+            }
+        }
+        .box {
+            padding: 0 40px;
+        }
+    }
+    .order-text {
+        padding: 17px 0;
+        font-size: 1.333rem;
+        color: #aaa;
+        text-align: center;
+    }
+
+    .estm-box {
+        margin-top: 80px;
+        width: 100%;
+        height: 132px;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #dbdbdb;
+        border-radius: 10px;
+        .estm-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #222;
+            padding-left: 56px;
+        }
+        .estm-check {
+            display: flex;
+            .chk-box {
+                padding-left: 56px;
+                label {
+                    font-size: 1.5rem !important;
+                    color: #222;
+                }
+                svg {
+                    margin-right: 10px !important;
+                    padding: 0 !important;
+                }
+            }
+        }
+    }
+    .order-btn {
+        padding: 120px 320px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+            width: 580px;
+        }
+    }
+}

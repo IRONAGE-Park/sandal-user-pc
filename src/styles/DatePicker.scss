@@ -1,0 +1,49 @@
+.react-datepicker-wrapper {
+    display: block !important;
+}
+.react-datepicker {
+    border-radius: 0 !important;
+    font-size: 16px !important;
+    
+    .react-datepicker__navigation {
+        font-size: 1.833rem;
+    } 
+}
+
+/* 헤더 */
+.react-datepicker__header {
+    background-color: #fff !important;
+    .react-datepicker__current-month {
+        font-size: 1.833rem;
+        padding: 5px !important;
+        background-color: #fff !important;
+    }
+}
+.react-datepicker__day-name {
+    width: 30px !important;
+    line-height: 30px !important;
+}
+/* 화살표 */
+.react-datepicker__navigation {
+    top: 19px !important;
+}
+
+.react-datepicker__day {
+    width: 30px !important;
+    line-height: 30px !important;
+}
+.react-datepicker__day--selected {
+    background-color: #4bd !important;
+    border-radius: 0 !important;
+}
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+    background-color: #4bd !important;
+    border-radius: 0 !important;
+}
+
+.react-datepicker__day--disabled {
+    color: #cccccc !important;
+}
